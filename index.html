@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Karaula Auto Detailing — Professionelle Fahrzeugaufbereitung in Geislingen</title>
+<meta name="description" content="Karaula Auto Detailing: professionelle Polster- & Lederreinigung, Scheinwerferaufbereitung und Hol- & Bringservice rund um Geislingen an der Steige. Termin per WhatsApp anfragen." />
+<meta name="theme-color" content="#0b0d10" />
+<meta name="msapplication-TileColor" content="#2b8bff" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Karaula Auto Detailing — Professionelle Fahrzeugaufbereitung" />
+<meta property="og:description" content="Polster- & Lederreinigung, Scheinwerferaufbereitung, Hol- & Bringservice rund um Geislingen an der Steige." />
+<meta property="og:image" content="img/og-image.jpg" />
+<meta property="og:type" content="website" />
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Flächen */
+  --bg:#0b0d10; --surface:#12161b; --surface-2:#1a2027; --surface-3:#222a33;
+  /* Linien / Glas */
+  --line:rgba(255,255,255,.09); --line-2:rgba(255,255,255,.16);
+  /* Text */
+  --text:#eef2f7; --muted:#9aa7b4; --muted-2:#6c7884;
+  /* Akzent — "frischer Glanz" Teal */
+  /* Akzent — Karaula CI: elektrisches Flyer-Blau + Chrom */
+  --accent:#1f80ff; --accent-2:#0a5be6; --accent-deep:#073a91;
+  --spark:#5bbcff; /* Blitz-/Chrom-Highlight */
+  --gold:#e6b864; /* nur Sterne */
+  --glow:rgba(31,128,255,.55);
+  /* Type */
+  --display:'Space Grotesk',system-ui,sans-serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);color:var(--text);background:var(--bg);
+  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.07;letter-spacing:-.01em}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.section{padding:clamp(72px,9vw,128px) 0}
+.section,.hero{scroll-margin-top:100px}
+.eyebrow{font-family:var(--display);font-weight:600;letter-spacing:.24em;text-transform:uppercase;
+  font-size:.72rem;color:var(--accent);display:inline-flex;align-items:center;gap:.7rem}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--accent);display:inline-block;box-shadow:0 0 10px var(--glow)}
+.h-sec{font-size:clamp(1.9rem,4vw,3rem);max-width:18ch}
+.lead{font-size:clamp(1.04rem,1.5vw,1.2rem);color:var(--muted);max-width:60ch}
+.center{text-align:center}
+.center .eyebrow,.center .h-sec,.center .lead{margin-left:auto;margin-right:auto}
+.center .h-sec{max-width:22ch}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;font-family:var(--sans);
+  font-weight:600;font-size:.98rem;padding:15px 28px;border-radius:12px;border:1.5px solid transparent;
+  cursor:pointer;transition:transform .22s ease,box-shadow .22s ease,background .22s ease,border-color .22s ease}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#001b3d;
+  box-shadow:0 14px 30px -12px var(--glow)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 22px 40px -14px var(--glow)}
+.btn-ghost{border-color:var(--line-2);color:var(--text)}
+.btn-ghost:hover{background:rgba(255,255,255,.05);border-color:var(--accent);transform:translateY(-3px)}
+.btn-wa{background:linear-gradient(135deg,var(--spark),var(--accent));color:#001b3d;
+  box-shadow:0 14px 30px -12px var(--glow)}
+.btn-wa:hover{transform:translateY(-3px);box-shadow:0 22px 40px -14px var(--glow)}
+
+/* ---------- Header ---------- */
+.topbar{position:sticky;top:0;z-index:60;
+  background:rgba(11,13,16,.72);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line)}
+.topbar-inner{max-width:1320px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;gap:22px}
+.brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.brand-logo{height:64px;width:auto;display:block;filter:drop-shadow(0 2px 12px rgba(31,128,255,.4))}
+.foot-logo{height:46px;width:auto;display:block}
+.brand-mark{width:40px;height:40px;border-radius:10px;flex-shrink:0;
+  background:linear-gradient(135deg,var(--surface-2),var(--surface));border:1px solid var(--line-2);
+  display:grid;place-items:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+.brand-mark svg{width:24px;height:24px}
+.brand-txt{display:flex;flex-direction:column;line-height:1}
+.brand-txt b{font-family:var(--display);font-size:1.2rem;font-weight:700;letter-spacing:.04em;
+  background:linear-gradient(180deg,#ffffff 0%,#cfe2ff 42%,#7fb0ff 60%,#ffffff 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 1px 4px rgba(43,139,255,.4))}
+.brand-txt span{font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);margin-top:5px}
+.nav{margin-left:auto;display:flex;align-items:center;gap:30px}
+.nav a.lnk{font-size:.92rem;color:var(--muted);font-weight:500;transition:color .2s ease;position:relative}
+.nav a.lnk:hover{color:var(--text)}
+.nav a.lnk::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--accent);
+  transition:width .25s ease;border-radius:2px}
+.nav a.lnk:hover::after{width:100%}
+.nav .btn{padding:11px 20px;font-size:.92rem}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--line-2);border-radius:10px;
+  width:44px;height:44px;cursor:pointer;align-items:center;justify-content:center}
+.burger span,.burger span::before,.burger span::after{content:"";display:block;width:20px;height:2px;
+  background:var(--text);position:relative;transition:.25s}
+.burger span::before{position:absolute;top:-6px}.burger span::after{position:absolute;top:6px}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;padding:clamp(56px,8vw,104px) 0 clamp(64px,9vw,112px);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;
+  background:radial-gradient(120% 80% at 78% 0%,rgba(43,139,255,.16),transparent 55%),
+             radial-gradient(80% 60% at 0% 100%,rgba(19,102,230,.10),transparent 60%),var(--bg)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.4;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:54px 54px;mask-image:radial-gradient(75% 60% at 60% 20%,#000,transparent 80%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,64px);align-items:center}
+.rating{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;
+  background:var(--surface);border:1px solid var(--line);font-size:.86rem;color:var(--muted);margin-bottom:26px}
+.stars{display:inline-flex;gap:1px;color:var(--gold)}
+.stars svg{width:15px;height:15px}
+.rating b{color:var(--text)}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4.2rem);font-weight:700;letter-spacing:-.02em}
+.hero h1 .hl{background:linear-gradient(120deg,var(--accent),var(--accent-2));-webkit-background-clip:text;
+  background-clip:text;-webkit-text-fill-color:transparent}
+.hero p.lead{margin:22px 0 32px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px;padding-top:28px;border-top:1px solid var(--line)}
+.hero-meta div{display:flex;align-items:center;gap:9px;font-size:.9rem;color:var(--muted)}
+.hero-meta svg{width:18px;height:18px;color:var(--accent);flex-shrink:0}
+/* Hero media */
+.hero-media{position:relative}
+.media-frame{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line-2);
+  box-shadow:0 40px 80px -30px rgba(0,0,0,.8);aspect-ratio:4/5}
+.media-frame img{width:100%;height:100%;object-fit:cover}
+.ph{background:
+   radial-gradient(120% 90% at 30% 10%,rgba(43,139,255,.18),transparent 55%),
+   linear-gradient(160deg,var(--surface-2),var(--surface));
+   display:grid;place-items:center;color:var(--muted-2);font-size:.8rem;text-align:center;gap:8px;
+   font-family:var(--display);letter-spacing:.04em}
+.ph svg{width:34px;height:34px;opacity:.5}
+.hero-badge{position:absolute;left:-18px;bottom:26px;background:var(--surface);border:1px solid var(--line-2);
+  border-radius:16px;padding:16px 18px;display:flex;align-items:center;gap:13px;
+  box-shadow:0 24px 50px -20px rgba(0,0,0,.7)}
+.hero-badge .ic{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;flex-shrink:0;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#001b3d}
+.hero-badge .ic svg{width:22px;height:22px}
+.hero-badge b{display:block;font-family:var(--display);font-size:1.05rem}
+.hero-badge span{font-size:.78rem;color:var(--muted)}
+
+/* ---------- Trust strip ---------- */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+.trust-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.trust-cell{background:var(--surface);padding:26px 24px;display:flex;align-items:center;gap:14px}
+.trust-cell svg{width:26px;height:26px;color:var(--accent);flex-shrink:0}
+.trust-cell b{font-family:var(--display);font-size:1.02rem;display:block}
+.trust-cell span{font-size:.82rem;color:var(--muted)}
+
+/* ---------- Services ---------- */
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:54px}
+.svc{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);
+  background:var(--surface);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.svc:hover{transform:translateY(-6px);border-color:var(--line-2);box-shadow:0 30px 60px -34px rgba(0,0,0,.8)}
+.svc-img{aspect-ratio:16/10;position:relative}
+.svc-img img,.svc-img .ph{width:100%;height:100%;object-fit:cover}
+.svc-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(18,22,27,.85))}
+.svc-num{position:absolute;top:16px;left:16px;z-index:2;font-family:var(--display);font-weight:700;
+  font-size:.8rem;letter-spacing:.1em;color:var(--accent);background:rgba(11,13,16,.6);
+  border:1px solid var(--line-2);padding:5px 11px;border-radius:8px;backdrop-filter:blur(6px)}
+.svc-body{padding:26px 26px 30px}
+.svc-body h3{font-size:1.35rem;margin-bottom:10px}
+.svc-body p{color:var(--muted);font-size:.96rem}
+/* Leistungs-Checkliste (Flyer-Stil) */
+.checklist{margin-top:34px;border:1px solid var(--line);border-radius:18px;background:var(--surface);
+  padding:30px clamp(22px,4vw,40px)}
+.checklist h3{font-size:1.15rem;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.checklist h3 svg{width:20px;height:20px;color:var(--accent)}
+.checklist ul{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 30px}
+.checklist li{display:flex;align-items:center;gap:12px;font-weight:500;font-size:1rem}
+.checklist .chk{width:24px;height:24px;border-radius:7px;flex-shrink:0;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;
+  box-shadow:0 4px 12px -4px var(--glow)}
+.checklist .chk svg{width:14px;height:14px}
+@media (max-width:620px){.checklist ul{grid-template-columns:1fr}}
+
+/* ---------- Why us ---------- */
+.why{background:
+  radial-gradient(90% 70% at 100% 0%,rgba(43,139,255,.07),transparent 60%),var(--bg)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px}
+.why-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:30px 26px;
+  transition:transform .3s ease,border-color .3s ease}
+.why-card:hover{transform:translateY(-5px);border-color:var(--accent)}
+.why-ic{width:50px;height:50px;border-radius:13px;display:grid;place-items:center;margin-bottom:20px;
+  background:linear-gradient(135deg,rgba(43,139,255,.18),rgba(19,102,230,.06));border:1px solid var(--line-2);color:var(--accent)}
+.why-ic svg{width:25px;height:25px}
+.why-card h3{font-size:1.18rem;margin-bottom:9px}
+.why-card p{color:var(--muted);font-size:.94rem}
+
+/* ---------- Before / After ---------- */
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:54px}
+.ba{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--surface)}
+.ba-stage{position:relative;aspect-ratio:16/10;overflow:hidden;user-select:none}
+.ba-stage img,.ba-stage .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba-after{clip-path:inset(0 0 0 50%);z-index:2}
+.ba-divider{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--accent);z-index:3;
+  transform:translateX(-1px);box-shadow:0 0 14px var(--glow);pointer-events:none}
+.ba-divider::after{content:"";position:absolute;top:50%;left:50%;width:38px;height:38px;transform:translate(-50%,-50%);
+  border-radius:50%;background:var(--accent);border:3px solid var(--bg);box-shadow:0 0 18px var(--glow)}
+.ba-divider::before{content:"⟺";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  color:#001b3d;font-size:.8rem;z-index:4;font-weight:700}
+.ba-tag{position:absolute;bottom:14px;z-index:4;font-family:var(--display);font-size:.7rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;padding:5px 11px;border-radius:7px;
+  background:rgba(11,13,16,.7);border:1px solid var(--line-2);backdrop-filter:blur(6px)}
+.ba-tag.l{left:14px;color:var(--muted)}.ba-tag.r{right:14px;color:var(--accent)}
+.ba-range{position:absolute;inset:0;z-index:5;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+.ba-cap{padding:18px 22px;display:flex;align-items:center;gap:10px}
+.ba-cap svg{width:20px;height:20px;color:var(--accent)}
+.ba-cap b{font-family:var(--display)}
+
+/* ---------- Process ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:54px;counter-reset:step}
+.step{position:relative;padding-top:18px}
+.step::before{counter-increment:step;content:"0" counter(step);font-family:var(--display);font-weight:700;
+  font-size:2.6rem;color:transparent;-webkit-text-stroke:1.5px var(--line-2);display:block;margin-bottom:14px}
+.step h3{font-size:1.12rem;margin-bottom:8px}
+.step p{color:var(--muted);font-size:.92rem}
+.step::after{content:"";position:absolute;top:42px;right:-11px;width:22px;height:1px;background:var(--line-2)}
+.step:last-child::after{display:none}
+
+/* ---------- Pricing / CTA band ---------- */
+.cta-band{position:relative;border-radius:24px;overflow:hidden;border:1px solid var(--line-2);
+  background:linear-gradient(135deg,var(--surface-2),var(--surface));padding:clamp(40px,6vw,72px);text-align:center}
+.cta-band::before{content:"";position:absolute;inset:0;z-index:0;opacity:.5;
+  background:radial-gradient(70% 120% at 50% -20%,rgba(43,139,255,.22),transparent 60%)}
+.cta-band > *{position:relative;z-index:1}
+.cta-band .price{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3.4vw,2.4rem);margin:6px 0 4px}
+.cta-band .price .accent{color:var(--accent)}
+.cta-band p{color:var(--muted);max-width:54ch;margin:0 auto 30px}
+.cta-band .hero-cta{justify-content:center}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:54px}
+.contact-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:34px}
+.contact-card h3{font-size:1.3rem;margin-bottom:6px}
+.contact-list{margin-top:24px;display:flex;flex-direction:column;gap:8px}
+.crow{display:flex;align-items:center;gap:16px;padding:16px;border-radius:12px;border:1px solid var(--line);
+  background:var(--surface-2);transition:border-color .2s ease,transform .2s ease}
+.crow:hover{border-color:var(--accent);transform:translateX(4px)}
+.crow .ic{width:44px;height:44px;border-radius:11px;display:grid;place-items:center;flex-shrink:0;
+  background:linear-gradient(135deg,rgba(43,139,255,.18),rgba(19,102,230,.06));color:var(--accent);border:1px solid var(--line-2)}
+.crow .ic svg{width:21px;height:21px}
+.crow span{display:block;font-size:.78rem;color:var(--muted);letter-spacing:.04em}
+.crow b{font-family:var(--display);font-size:1.02rem;word-break:break-word}
+.appoint{margin-top:22px;display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:12px;
+  background:rgba(43,139,255,.07);border:1px solid rgba(43,139,255,.25)}
+.appoint svg{width:22px;height:22px;color:var(--accent);flex-shrink:0;margin-top:2px}
+.appoint p{font-size:.92rem;color:var(--text)}
+.socials{display:flex;gap:12px;margin-top:24px}
+.socials a{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line-2);
+  color:var(--text);transition:.22s}
+.socials a:hover{background:var(--accent);color:#001b3d;transform:translateY(-3px);border-color:var(--accent)}
+.socials svg{width:22px;height:22px}
+.map-card{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.map-card .ph{flex:1;min-height:260px}
+.map-card .map-foot{padding:22px 28px;border-top:1px solid var(--line)}
+
+/* ---------- Footer ---------- */
+footer{border-top:1px solid var(--line);padding:48px 0 36px;background:var(--surface)}
+.foot-inner{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
+.foot-links{display:flex;gap:24px;flex-wrap:wrap}
+.foot-links a{color:var(--muted);font-size:.9rem;transition:color .2s}
+.foot-links a:hover{color:var(--accent)}
+.foot-copy{color:var(--muted-2);font-size:.84rem}
+
+/* ---------- Sticky mobile CTA ---------- */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;gap:10px;padding:12px 16px;
+  background:rgba(11,13,16,.92);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.sticky-cta .btn{flex:1;padding:14px}
+
+/* ---------- Responsive ---------- */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-media{max-width:440px;margin:0 auto;order:-1}
+  .media-frame{aspect-ratio:16/11}
+  .trust-inner{grid-template-columns:1fr 1fr}
+  .svc-grid,.ba-grid,.contact-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .step::after{display:none}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;
+    gap:0;background:var(--surface);border-bottom:1px solid var(--line);padding:8px}
+  .nav.open{display:flex}
+  .nav a.lnk{padding:14px 12px;border-bottom:1px solid var(--line)}
+  .nav a.lnk::after{display:none}
+  .nav .btn{margin:10px 8px}
+  .burger{display:flex}
+  .sticky-cta{display:flex}
+  body{padding-bottom:74px}
+}
+@media (max-width:600px){
+  .brand-logo{height:50px}
+}
+@media (max-width:520px){
+  .trust-inner{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .hero-meta{gap:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#top" class="brand" aria-label="Karaula Auto Detailing — Startseite">
+      <img class="brand-logo" src="img/logo.png" alt="Karaula Auto Detailing" />
+    </a>
+    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav"><span></span></button>
+    <nav class="nav" id="nav">
+      <a class="lnk" href="#leistungen">Leistungen</a>
+      <a class="lnk" href="#warum">Warum wir</a>
+      <a class="lnk" href="#ergebnisse">Ergebnisse</a>
+      <a class="lnk" href="#ablauf">Ablauf</a>
+      <a class="lnk" href="#kontakt">Kontakt</a>
+      <a class="btn btn-primary" href="https://wa.me/491739545318" target="_blank" rel="noopener">Termin anfragen</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="rating">
+        <span class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.3 7-6.3-3.4L5.7 21 7 14.2 2 9.4l7-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.3 7-6.3-3.4L5.7 21 7 14.2 2 9.4l7-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.3 7-6.3-3.4L5.7 21 7 14.2 2 9.4l7-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.3 7-6.3-3.4L5.7 21 7 14.2 2 9.4l7-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.3 7-6.3-3.4L5.7 21 7 14.2 2 9.4l7-.9z"/></svg>
+        </span>
+        <span><b>5,0</b> · Zufriedene Kundinnen & Kunden</span>
+      </div>
+      <h1>Dein Fahrzeug wieder <span class="hl">wie neu</span> — innen & außen.</h1>
+      <p class="lead">Professionelle Polster- und Lederreinigung, Scheinwerferaufbereitung und ein bequemer Hol- &amp; Bringservice rund um Geislingen an der Steige. Sorgfältiges Handwerk, hochwertige Produkte, faire Preise.</p>
+      <div class="hero-cta">
+        <a class="btn btn-wa" href="https://wa.me/491739545318" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.4A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .3-3.4-.7-2.9-1.2-4.7-4.2-4.8-4.4-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.6.3.1.2.1.7-.1 1.3z"/></svg>
+          Termin per WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#leistungen">Leistungen ansehen</a>
+      </div>
+      <div class="hero-meta">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Geislingen a. d. Steige &amp; Umgebung</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Termine nach Vereinbarung</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13v8H3z"/><path d="M16 10h3l2 3v2h-5z"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg> Hol- &amp; Bringservice</div>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="media-frame">
+        <img src="img/hero-detailing.jpg" alt="Frisch aufbereiteter Fahrzeuginnenraum mit gereinigten Ledersitzen" loading="eager"
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',innerHTML:'<svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'M21 15l-5-5L5 21\'/></svg><span>img/hero-detailing.jpg</span>'}))">
+      </div>
+      <div class="hero-badge">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <div><b>Zufriedenheits&shy;garantie</b><span>Beratung inklusive</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="trust">
+  <div class="trust-inner">
+    <div class="trust-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg><div><b>Saubere Arbeit</b><span>Sorgfältig & gründlich</span></div></div>
+    <div class="trust-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M5 5l14 14M19 5L5 19"/></svg><div><b>Hochwertige Mittel</b><span>Materialschonend</span></div></div>
+    <div class="trust-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><div><b>Faire Preise</b><span>Transparent kalkuliert</span></div></div>
+    <div class="trust-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13v8H3z"/><path d="M16 10h3l2 3v2h-5z"/><circle cx="7" cy="17" r="1.8"/><circle cx="17" cy="17" r="1.8"/></svg><div><b>Hol- & Bringservice</b><span>Bequem ohne Aufwand</span></div></div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section" id="leistungen">
+  <div class="wrap">
+    <span class="eyebrow">Leistungen</span>
+    <h2 class="h-sec">Alles für ein rundum gepflegtes Fahrzeug</h2>
+    <p class="lead" style="margin-top:16px">Jede Aufbereitung wird individuell auf Fahrzeugtyp und Zustand abgestimmt — vom Innenraum bis zu kristallklaren Scheinwerfern.</p>
+
+    <div class="svc-grid">
+      <article class="svc">
+        <div class="svc-img"><span class="svc-num">01</span>
+          <img src="img/service-polster.jpg" alt="Gründlich gereinigte Stoff-Autositze nach Polsterreinigung" loading="lazy"
+            onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',innerHTML:'<span>img/service-polster.jpg</span>'}))">
+        </div>
+        <div class="svc-body"><h3>Sitze Tiefenreinigung</h3><p>Tiefenreinigung von Sitzen und Stoffen — Flecken, Gerüche und festsitzender Schmutz werden gründlich entfernt. Der Innenraum riecht und wirkt wieder wie neu.</p></div>
+      </article>
+
+      <article class="svc">
+        <div class="svc-img"><span class="svc-num">02</span>
+          <img src="img/service-leder.jpg" alt="Gepflegte und konditionierte Ledersitze nach der Lederpflege" loading="lazy"
+            onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',innerHTML:'<span>img/service-leder.jpg</span>'}))">
+        </div>
+        <div class="svc-body"><h3>Lederreinigung &amp; Pflege</h3><p>Schonende, professionelle Reinigung und Pflege von Ledersitzen mit Schutzbehandlung. Erhält Geschmeidigkeit und Optik — und beugt Rissen vor.</p></div>
+      </article>
+
+      <article class="svc">
+        <div class="svc-img"><span class="svc-num">03</span>
+          <img src="img/service-scheinwerfer.jpg" alt="Klarer, polierter Scheinwerfer nach der Aufbereitung" loading="lazy"
+            onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',innerHTML:'<span>img/service-scheinwerfer.jpg</span>'}))">
+        </div>
+        <div class="svc-body"><h3>Scheinwerferaufbereitung</h3><p>Polieren und Versiegeln vergilbter Scheinwerfer für bessere Sicht, mehr Sicherheit und einen frischen Look — ganz ohne teuren Austausch.</p></div>
+      </article>
+
+      <article class="svc">
+        <div class="svc-img"><span class="svc-num">04</span>
+          <img src="img/service-service.jpg" alt="Fahrzeugübergabe beim Hol- und Bringservice" loading="lazy"
+            onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',innerHTML:'<span>img/service-service.jpg</span>'}))">
+        </div>
+        <div class="svc-body"><h3>Hol- &amp; Bringservice</h3><p>Auf Wunsch holen wir dein Fahrzeug ab und bringen es nach der Aufbereitung zurück. Maximal bequem — du sparst Zeit und Wege.</p></div>
+      </article>
+    </div>
+
+    <div class="checklist">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Unser kompletter Leistungsumfang</h3>
+      <ul>
+        <li><span class="chk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span>Sitze Tiefenreinigung</li>
+        <li><span class="chk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span>Kunststoffreinigung</li>
+        <li><span class="chk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span>Lederreinigung &amp; Pflege</li>
+        <li><span class="chk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span>Staubsaugen</li>
+        <li><span class="chk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span>Fußmattenreinigung</li>
+        <li><span class="chk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span>Scheinwerferaufbereitung</li>
+        <li><span class="chk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span>Bodenreinigung</li>
+        <li><span class="chk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span>Hol- &amp; Bringservice</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section class="section why" id="warum">
+  <div class="wrap">
+    <span class="eyebrow">Warum Karaula</span>
+    <h2 class="h-sec">Worauf du dich verlassen kannst</h2>
+
+    <div class="why-grid">
+      <div class="why-card"><div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 5 5.6.8-4 4 1 5.6L12 20l-5 2.4 1-5.6-4-4 5.6-.8z"/></svg></div><h3>Professionelles Handwerk</h3><p>Sorgfältige, gründliche Arbeit mit Liebe zum Detail — bei jedem Fahrzeug.</p></div>
+      <div class="why-card"><div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></div><h3>Hochwertige Produkte</h3><p>Materialschonende Reinigungs- und Pflegemittel für ein langlebiges Ergebnis.</p></div>
+      <div class="why-card"><div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Faire Preise</h3><p>Transparente, ehrliche Kalkulation — abgestimmt auf Aufwand und Zustand.</p></div>
+      <div class="why-card"><div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10h8M8 14h5"/><path d="M21 12a8 8 0 0 1-8 8H6l-3 3V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8z"/></svg></div><h3>Persönliche Beratung</h3><p>Wir besprechen dein Anliegen und empfehlen, was wirklich sinnvoll ist.</p></div>
+      <div class="why-card"><div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><h3>Zufriedenheit im Fokus</h3><p>Dein Ergebnis steht im Mittelpunkt — bis du wirklich zufrieden bist.</p></div>
+      <div class="why-card"><div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13v8H3z"/><path d="M16 10h3l2 3v2h-5z"/><circle cx="7" cy="17" r="1.8"/><circle cx="17" cy="17" r="1.8"/></svg></div><h3>Bequemer Service</h3><p>Hol- &amp; Bringservice auf Wunsch — du musst dich um nichts kümmern.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEFORE / AFTER ============ -->
+<section class="section" id="ergebnisse">
+  <div class="wrap">
+    <span class="eyebrow">Ergebnisse</span>
+    <h2 class="h-sec">Vorher / Nachher — zieh den Regler</h2>
+    <p class="lead" style="margin-top:16px">Echte Aufbereitungen aus der Praxis. Ziehe den Regler, um den Unterschied zu sehen.</p>
+
+    <div class="ba-grid">
+      <div class="ba">
+        <div class="ba-stage" data-ba>
+          <img class="ba-before" src="img/ba-polster-vorher.jpg" alt="Verschmutzter Autositz vor der Reinigung" loading="lazy"
+            onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph ba-before',innerHTML:'<span>img/ba-polster-vorher.jpg</span>'}))">
+          <img class="ba-after" src="img/ba-polster-nachher.jpg" alt="Derselbe Autositz sauber nach der Polsterreinigung" loading="lazy"
+            onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph ba-after',innerHTML:'<span>img/ba-polster-nachher.jpg</span>'}))">
+          <span class="ba-tag l">Vorher</span><span class="ba-tag r">Nachher</span>
+          <div class="ba-divider"></div>
+          <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Vorher-Nachher-Regler Polsterreinigung">
+        </div>
+        <div class="ba-cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><b>Polster &amp; Innenraum</b></div>
+      </div>
+
+      <div class="ba">
+        <div class="ba-stage" data-ba>
+          <img class="ba-before" src="img/ba-scheinwerfer-vorher.jpg" alt="Vergilbter Scheinwerfer vor der Aufbereitung" loading="lazy"
+            onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph ba-before',innerHTML:'<span>img/ba-scheinwerfer-vorher.jpg</span>'}))">
+          <img class="ba-after" src="img/ba-scheinwerfer-nachher.jpg" alt="Klarer Scheinwerfer nach der Aufbereitung" loading="lazy"
+            onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph ba-after',innerHTML:'<span>img/ba-scheinwerfer-nachher.jpg</span>'}))">
+          <span class="ba-tag l">Vorher</span><span class="ba-tag r">Nachher</span>
+          <div class="ba-divider"></div>
+          <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Vorher-Nachher-Regler Scheinwerferaufbereitung">
+        </div>
+        <div class="ba-cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg><b>Scheinwerfer</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section" id="ablauf" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow">Ablauf</span>
+    <h2 class="h-sec">In vier Schritten zum Ergebnis</h2>
+
+    <div class="steps">
+      <div class="step"><h3>Anfrage</h3><p>Melde dich per WhatsApp, Telefon oder E-Mail mit deinem Anliegen.</p></div>
+      <div class="step"><h3>Beratung &amp; Termin</h3><p>Wir besprechen Umfang und Zustand und vereinbaren einen Termin.</p></div>
+      <div class="step"><h3>Aufbereitung</h3><p>Auf Wunsch holen wir das Fahrzeug ab und bereiten es professionell auf.</p></div>
+      <div class="step"><h3>Übergabe</h3><p>Du bekommst dein Fahrzeug frisch gepflegt zurück — wie neu.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING / CTA BAND ============ -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-band">
+      <span class="eyebrow center" style="display:inline-flex">Preise</span>
+      <div class="price">Preise auf <span class="accent">Anfrage</span></div>
+      <p>Jede Aufbereitung wird individuell auf Fahrzeugtyp und Zustand abgestimmt. Schreib uns kurz, was du brauchst — du bekommst schnell ein faires, unverbindliches Angebot.</p>
+      <div class="hero-cta">
+        <a class="btn btn-wa" href="https://wa.me/491739545318" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.4A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .3-3.4-.7-2.9-1.2-4.7-4.2-4.8-4.4-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.6.3.1.2.1.7-.1 1.3z"/></svg>
+          Angebot anfragen
+        </a>
+        <a class="btn btn-ghost" href="tel:+491739545318">Anrufen: 0173 9545318</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section" id="kontakt" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow">Kontakt</span>
+    <h2 class="h-sec">Termin anfragen</h2>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>So erreichst du uns</h3>
+        <p class="lead" style="font-size:.96rem">Wir arbeiten ausschließlich nach Termin. Schreib oder ruf uns an — wir melden uns schnell zurück.</p>
+        <div class="contact-list">
+          <a class="crow" href="https://wa.me/491739545318" target="_blank" rel="noopener">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.4A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .3-3.4-.7-2.9-1.2-4.7-4.2-4.8-4.4-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.6.3.1.2.1.7-.1 1.3z"/></svg></span>
+            <div><span>WhatsApp & Telefon</span><b>+49 173 9545318</b></div>
+          </a>
+          <a class="crow" href="mailto:karaula-detailing@hotmail.com">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <div><span>E-Mail</span><b>karaula-detailing@hotmail.com</b></div>
+          </a>
+          <div class="crow" style="cursor:default">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div><span>Einsatzgebiet</span><b>Geislingen an der Steige &amp; Umgebung</b></div>
+          </div>
+        </div>
+        <div class="appoint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <p><b>Wir arbeiten ausschließlich nach Termin.</b> Bitte vereinbare vorab einen Termin — so nehmen wir uns die nötige Zeit für dein Fahrzeug.</p>
+        </div>
+        <div class="socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Karaula auf Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="Karaula auf TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.3 1.7 3.9 4 4.1v2.8c-1.4.1-2.7-.3-4-1V15a5.5 5.5 0 1 1-5.5-5.5c.3 0 .6 0 .9.1v2.9a2.6 2.6 0 1 0 1.8 2.5V3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-card map-card">
+        <div class="ph" role="img" aria-label="Karte: Einsatzgebiet Geislingen an der Steige">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>img/map-geislingen.jpg</span>
+        </div>
+        <div class="map-foot">
+          <b style="font-family:var(--display)">Geislingen an der Steige</b>
+          <p style="color:var(--muted);font-size:.92rem;margin-top:4px">Aufbereitung vor Ort &amp; Hol- &amp; Bringservice in der Region.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot-inner">
+    <a href="#top" class="brand" aria-label="Karaula Auto Detailing">
+      <img class="foot-logo" src="img/logo.png" alt="Karaula Auto Detailing" />
+    </a>
+    <nav class="foot-links" aria-label="Rechtliches">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </nav>
+    <span class="foot-copy">© <span id="year"></span> Karaula Auto Detailing · Geislingen a. d. Steige</span>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE CTA ============ -->
+<div class="sticky-cta">
+  <a class="btn btn-wa" href="https://wa.me/491739545318" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn btn-ghost" href="tel:+491739545318">Anrufen</a>
+</div>
+
+<script>
+// Jahr
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Mobile-Menü
+const burger = document.getElementById('burger'), nav = document.getElementById('nav');
+burger.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+  burger.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+});
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  nav.classList.remove('open'); burger.setAttribute('aria-expanded','false');
+}));
+
+// Vorher/Nachher-Regler
+document.querySelectorAll('[data-ba]').forEach(stage => {
+  const range = stage.querySelector('.ba-range');
+  const after = stage.querySelector('.ba-after');
+  const div = stage.querySelector('.ba-divider');
+  const set = v => { after.style.clipPath = `inset(0 0 0 ${v}%)`; div.style.left = v + '%'; };
+  set(range.value);
+  range.addEventListener('input', e => set(e.target.value));
+});
+</script>
+</body>
+</html>
