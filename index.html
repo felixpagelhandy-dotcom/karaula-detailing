@@ -277,8 +277,8 @@ footer{border-top:1px solid var(--line);padding:48px 0 36px;background:var(--sur
 /* ---------- Responsive ---------- */
 @media (max-width:900px){
   .hero-grid{grid-template-columns:1fr}
-  .hero-media{max-width:440px;margin:0 auto;order:-1}
-  .media-frame{aspect-ratio:16/11}
+  .hero-media{max-width:360px;margin:6px auto 0;order:2}
+  .media-frame{aspect-ratio:4/5}
   .trust-inner{grid-template-columns:1fr 1fr}
   .svc-grid,.ba-grid,.contact-grid{grid-template-columns:1fr}
   .why-grid{grid-template-columns:1fr}
@@ -296,6 +296,18 @@ footer{border-top:1px solid var(--line);padding:48px 0 36px;background:var(--sur
 }
 @media (max-width:600px){
   .brand-logo{height:50px}
+  .hero{padding-top:30px}
+  .hero h1{font-size:1.95rem;line-height:1.12}
+  .hero p.lead{margin:16px 0 24px;font-size:1rem}
+  .hero .rating{margin-bottom:20px;font-size:.8rem;padding:7px 12px}
+  .hero-cta{gap:10px}
+  .hero-cta .btn{flex:1;padding:14px 16px}
+  .hero-meta{margin-top:24px;padding-top:20px;flex-direction:column;gap:12px}
+  .media-frame{aspect-ratio:4/5;border-radius:16px}
+  .hero-badge{left:12px;right:auto;bottom:12px;padding:12px 14px;gap:10px}
+  .hero-badge .ic{width:36px;height:36px}
+  .hero-badge b{font-size:.95rem}
+  .hero-badge span{font-size:.72rem}
 }
 @media (max-width:520px){
   .trust-inner{grid-template-columns:1fr}
