@@ -303,11 +303,17 @@ footer{border-top:1px solid var(--line);padding:48px 0 36px;background:var(--sur
   .hero-cta{gap:10px}
   .hero-cta .btn{flex:1;padding:14px 16px}
   .hero-meta{margin-top:24px;padding-top:20px;flex-direction:column;gap:12px}
-  .media-frame{aspect-ratio:4/5;border-radius:16px}
-  .hero-badge{left:12px;right:auto;bottom:12px;padding:12px 14px;gap:10px}
-  .hero-badge .ic{width:36px;height:36px}
-  .hero-badge b{font-size:.95rem}
-  .hero-badge span{font-size:.72rem}
+  /* Auto als dezenter Hintergrund, Bildkarte + Badge ausblenden */
+  .hero-media{display:none}
+  .hero{padding-top:48px}
+  .hero::before{
+    background:
+      linear-gradient(180deg,rgba(11,13,16,.72) 0%,rgba(11,13,16,.86) 55%,rgba(11,13,16,.96) 100%),
+      radial-gradient(120% 70% at 80% 0%,rgba(31,128,255,.18),transparent 55%),
+      url('img/hero-detailing.jpg') center 18% / cover no-repeat,
+      var(--bg);
+  }
+  .hero::after{opacity:.18}
 }
 @media (max-width:520px){
   .trust-inner{grid-template-columns:1fr}
