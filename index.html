@@ -276,6 +276,30 @@ footer{border-top:1px solid var(--line);padding:48px 0 36px;background:var(--sur
   background:rgba(11,13,16,.92);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
 .sticky-cta .btn{flex:1;padding:14px}
 
+/* ---------- Anfrageformular ---------- */
+.req-form{display:flex;flex-direction:column;gap:14px;margin-top:22px}
+.req-form .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:.82rem;color:var(--muted);font-weight:600;letter-spacing:.01em}
+.field label .req{color:var(--accent)}
+.field input,.field select,.field textarea{
+  background:var(--surface-2);border:1px solid var(--line);border-radius:11px;color:var(--text);
+  font:inherit;font-size:.95rem;padding:12px 14px;width:100%;
+  transition:border-color .2s ease,box-shadow .2s ease,background .2s ease}
+.field input::placeholder,.field textarea::placeholder{color:var(--muted-2)}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--accent);background:var(--surface-3);box-shadow:0 0 0 3px rgba(232,179,74,.18)}
+.field textarea{resize:vertical;min-height:96px;line-height:1.5}
+.field select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:40px;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23e8b34a' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9l6 6 6-6'/></svg>");
+  background-repeat:no-repeat;background-position:right 13px center}
+.field select option{background:var(--surface-2);color:var(--text)}
+.req-form .btn{width:100%;margin-top:6px}
+.form-alt{text-align:center;font-size:.88rem;color:var(--muted);margin:2px 0 0}
+.form-alt a{color:var(--accent);text-decoration:underline;cursor:pointer}
+.form-note{font-size:.76rem;color:var(--muted-2);line-height:1.45}
+@media (max-width:520px){.req-form .frow{grid-template-columns:1fr}}
+
 /* ---------- Responsive ---------- */
 @media (max-width:900px){
   .hero-grid{grid-template-columns:1fr}
@@ -583,15 +607,63 @@ footer{border-top:1px solid var(--line);padding:48px 0 36px;background:var(--sur
         </div>
       </div>
 
-      <div class="contact-card map-card">
-        <div class="ph" role="img" aria-label="Karte: Einsatzgebiet Geislingen an der Steige">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>img/map-geislingen.jpg</span>
-        </div>
-        <div class="map-foot">
-          <b style="font-family:var(--display)">Geislingen an der Steige</b>
-          <p style="color:var(--muted);font-size:.92rem;margin-top:4px">Aufbereitung vor Ort &amp; Hol- &amp; Bringservice in der Region.</p>
-        </div>
+      <div class="contact-card">
+        <h3>Anfrage senden</h3>
+        <p class="lead" style="font-size:.96rem">Fülle das Formular aus — du erhältst schnell ein unverbindliches Angebot.</p>
+        <form class="req-form" id="anfrage" novalidate>
+          <div class="field">
+            <label for="f-name">Name und Nachname <span class="req">*</span></label>
+            <input id="f-name" name="name" type="text" required autocomplete="name" placeholder="Max Mustermann">
+          </div>
+          <div class="frow">
+            <div class="field">
+              <label for="f-mail">E-Mail-Adresse <span class="req">*</span></label>
+              <input id="f-mail" name="email" type="email" required autocomplete="email" placeholder="name@beispiel.de">
+            </div>
+            <div class="field">
+              <label for="f-tel">Telefonnummer <span class="req">*</span></label>
+              <input id="f-tel" name="tel" type="tel" required autocomplete="tel" placeholder="0173 0000000">
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-str">Straße und Hausnummer <span class="req">*</span></label>
+            <input id="f-str" name="strasse" type="text" required autocomplete="street-address" placeholder="Musterstraße 1">
+          </div>
+          <div class="frow">
+            <div class="field">
+              <label for="f-plz">PLZ <span class="req">*</span></label>
+              <input id="f-plz" name="plz" type="text" required inputmode="numeric" autocomplete="postal-code" placeholder="73312">
+            </div>
+            <div class="field">
+              <label for="f-ort">Ort <span class="req">*</span></label>
+              <input id="f-ort" name="ort" type="text" required autocomplete="address-level2" placeholder="Geislingen">
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-kfz">Fahrzeug (Marke, Modell, Baujahr) <span class="req">*</span></label>
+            <input id="f-kfz" name="fahrzeug" type="text" required placeholder="z. B. VW Golf 7, 2018">
+          </div>
+          <div class="field">
+            <label for="f-leistung">Gewünschte Leistung <span class="req">*</span></label>
+            <select id="f-leistung" name="leistung" required>
+              <option value="" disabled selected>Bitte wählen …</option>
+              <option>Innenaufbereitung (Komplettpaket)</option>
+              <option>Polsterreinigung (nur Sitze)</option>
+              <option>Lederreinigung</option>
+              <option>Scheinwerferaufbereitung</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg">Nachricht / Anfrage <span class="req">*</span></label>
+            <textarea id="f-msg" name="nachricht" required placeholder="Beschreibe kurz dein Anliegen, Zustand des Fahrzeugs, Wunschtermin …"></textarea>
+          </div>
+          <button class="btn btn-wa" type="submit">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.4A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .3-3.4-.7-2.9-1.2-4.7-4.2-4.8-4.4-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.6.3.1.2.1.7-.1 1.3z"/></svg>
+            Anfrage per WhatsApp senden
+          </button>
+          <p class="form-alt">oder <a id="sendMail" role="button" tabindex="0">per E-Mail senden</a></p>
+          <p class="form-note">* Pflichtfeld. Mit dem Absenden öffnet sich WhatsApp bzw. dein E-Mail-Programm mit deiner fertig ausgefüllten Anfrage — du musst nur noch auf „Senden" tippen.</p>
+        </form>
       </div>
     </div>
   </div>
@@ -645,6 +717,41 @@ document.querySelectorAll('[data-ba]').forEach(stage => {
   set(range.value);
   range.addEventListener('input', e => set(e.target.value));
 });
+
+// Anfrageformular -> WhatsApp / E-Mail
+const form = document.getElementById('anfrage');
+if (form) {
+  const v = id => (document.getElementById(id).value || '').trim();
+  const buildText = () => {
+    return [
+      'Neue Anfrage über die Website',
+      '',
+      'Name: ' + v('f-name'),
+      'E-Mail: ' + v('f-mail'),
+      'Telefon: ' + v('f-tel'),
+      'Adresse: ' + v('f-str') + ', ' + v('f-plz') + ' ' + v('f-ort'),
+      'Fahrzeug: ' + v('f-kfz'),
+      'Gewünschte Leistung: ' + v('f-leistung'),
+      '',
+      'Nachricht: ' + v('f-msg')
+    ].join('\n');
+  };
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    const url = 'https://wa.me/491739545318?text=' + encodeURIComponent(buildText());
+    window.open(url, '_blank', 'noopener');
+  });
+  const mail = document.getElementById('sendMail');
+  const sendMail = () => {
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    const subject = 'Anfrage Auto Detailing – ' + v('f-name');
+    window.location.href = 'mailto:karaula-detailing@hotmail.com?subject=' +
+      encodeURIComponent(subject) + '&body=' + encodeURIComponent(buildText());
+  };
+  mail.addEventListener('click', sendMail);
+  mail.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); sendMail(); } });
+}
 </script>
 </body>
 </html>
