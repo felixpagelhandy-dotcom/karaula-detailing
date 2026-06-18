@@ -78,8 +78,10 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.07;letter-s
   border-bottom:1px solid var(--line)}
 .topbar-inner{max-width:1320px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;gap:22px}
 .brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
-.brand-logo{height:64px;width:auto;display:block;filter:drop-shadow(0 2px 12px rgba(232,179,74,.4))}
-.foot-logo{height:46px;width:auto;display:block}
+.brand-logo{height:64px;width:auto;display:block;filter:hue-rotate(185deg) saturate(1.15) drop-shadow(0 2px 12px rgba(232,179,74,.4))}
+.foot-logo{height:46px;width:auto;display:block;filter:hue-rotate(185deg) saturate(1.15)}
+/* Fotos von Blau- auf Gold-/Warmlicht schieben */
+.media-frame img,.svc-img img,.ba-stage img{filter:hue-rotate(185deg) saturate(1.18)}
 .brand-mark{width:40px;height:40px;border-radius:10px;flex-shrink:0;
   background:linear-gradient(135deg,var(--surface-2),var(--surface));border:1px solid var(--line-2);
   display:grid;place-items:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
@@ -301,17 +303,19 @@ footer{border-top:1px solid var(--line);padding:48px 0 36px;background:var(--sur
   .hero-cta{gap:10px}
   .hero-cta .btn{flex:1;padding:14px 16px}
   .hero-meta{margin-top:24px;padding-top:20px;flex-direction:column;gap:12px}
-  /* Auto als dezenter Hintergrund, Bildkarte + Badge ausblenden */
+  /* Auto als dezenter Gold-Hintergrund, Bildkarte + Badge ausblenden */
   .hero-media{display:none}
   .hero{padding-top:48px}
+  /* ::before = nur das Auto (gold gefiltert), liegt ganz hinten */
   .hero::before{
+    background:url('img/hero-detailing.jpg') center 18% / cover no-repeat;
+    filter:hue-rotate(185deg) saturate(1.18);opacity:1}
+  /* ::after = dunkler Gold-Overlay darüber, damit Text lesbar bleibt */
+  .hero::after{
+    -webkit-mask:none;mask:none;opacity:1;background-size:auto;
     background:
-      linear-gradient(180deg,rgba(11,13,16,.72) 0%,rgba(11,13,16,.86) 55%,rgba(11,13,16,.96) 100%),
-      radial-gradient(120% 70% at 80% 0%,rgba(232,179,74,.18),transparent 55%),
-      url('img/hero-detailing.jpg') center 18% / cover no-repeat,
-      var(--bg);
-  }
-  .hero::after{opacity:.18}
+      linear-gradient(180deg,rgba(11,13,16,.66) 0%,rgba(11,13,16,.85) 55%,rgba(11,13,16,.95) 100%),
+      radial-gradient(120% 70% at 80% 0%,rgba(232,179,74,.16),transparent 55%)}
 }
 @media (max-width:520px){
   .trust-inner{grid-template-columns:1fr}
