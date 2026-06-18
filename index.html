@@ -6,7 +6,7 @@
 <title>Karaula Auto Detailing — Professionelle Fahrzeugaufbereitung in Geislingen</title>
 <meta name="description" content="Karaula Auto Detailing: professionelle Polster- & Lederreinigung, Scheinwerferaufbereitung und Hol- & Bringservice rund um Geislingen an der Steige. Termin per WhatsApp anfragen." />
 <meta name="theme-color" content="#0b0d10" />
-<meta name="msapplication-TileColor" content="#2b8bff" />
+<meta name="msapplication-TileColor" content="#e8b34a" />
 
 <!-- Open Graph -->
 <meta property="og:title" content="Karaula Auto Detailing — Professionelle Fahrzeugaufbereitung" />
@@ -28,10 +28,10 @@
   --text:#eef2f7; --muted:#9aa7b4; --muted-2:#6c7884;
   /* Akzent — "frischer Glanz" Teal */
   /* Akzent — Karaula CI: elektrisches Flyer-Blau + Chrom */
-  --accent:#1f80ff; --accent-2:#0a5be6; --accent-deep:#073a91;
-  --spark:#5bbcff; /* Blitz-/Chrom-Highlight */
+  --accent:#e8b34a; --accent-2:#c8902a; --accent-deep:#6b4e12;
+  --spark:#f5d488; /* Champagner-/Gold-Highlight */
   --gold:#e6b864; /* nur Sterne */
-  --glow:rgba(31,128,255,.55);
+  --glow:rgba(232,179,74,.55);
   /* Type */
   --display:'Space Grotesk',system-ui,sans-serif;
   --sans:'Inter',system-ui,sans-serif;
@@ -63,12 +63,12 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.07;letter-s
   font-weight:600;font-size:.98rem;padding:15px 28px;border-radius:12px;border:1.5px solid transparent;
   cursor:pointer;transition:transform .22s ease,box-shadow .22s ease,background .22s ease,border-color .22s ease}
 .btn svg{width:18px;height:18px}
-.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#001b3d;
+.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#1a1206;
   box-shadow:0 14px 30px -12px var(--glow)}
 .btn-primary:hover{transform:translateY(-3px);box-shadow:0 22px 40px -14px var(--glow)}
 .btn-ghost{border-color:var(--line-2);color:var(--text)}
 .btn-ghost:hover{background:rgba(255,255,255,.05);border-color:var(--accent);transform:translateY(-3px)}
-.btn-wa{background:linear-gradient(135deg,var(--spark),var(--accent));color:#001b3d;
+.btn-wa{background:linear-gradient(135deg,var(--spark),var(--accent));color:#1a1206;
   box-shadow:0 14px 30px -12px var(--glow)}
 .btn-wa:hover{transform:translateY(-3px);box-shadow:0 22px 40px -14px var(--glow)}
 
@@ -78,7 +78,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.07;letter-s
   border-bottom:1px solid var(--line)}
 .topbar-inner{max-width:1320px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;gap:22px}
 .brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
-.brand-logo{height:64px;width:auto;display:block;filter:drop-shadow(0 2px 12px rgba(31,128,255,.4))}
+.brand-logo{height:64px;width:auto;display:block;filter:drop-shadow(0 2px 12px rgba(232,179,74,.4))}
 .foot-logo{height:46px;width:auto;display:block}
 .brand-mark{width:40px;height:40px;border-radius:10px;flex-shrink:0;
   background:linear-gradient(135deg,var(--surface-2),var(--surface));border:1px solid var(--line-2);
@@ -86,9 +86,9 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.07;letter-s
 .brand-mark svg{width:24px;height:24px}
 .brand-txt{display:flex;flex-direction:column;line-height:1}
 .brand-txt b{font-family:var(--display);font-size:1.2rem;font-weight:700;letter-spacing:.04em;
-  background:linear-gradient(180deg,#ffffff 0%,#cfe2ff 42%,#7fb0ff 60%,#ffffff 100%);
+  background:linear-gradient(180deg,#ffffff 0%,#f3e3bd 42%,#d9b85e 60%,#ffffff 100%);
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-  filter:drop-shadow(0 1px 4px rgba(43,139,255,.4))}
+  filter:drop-shadow(0 1px 4px rgba(232,179,74,.4))}
 .brand-txt span{font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);margin-top:5px}
 .nav{margin-left:auto;display:flex;align-items:center;gap:30px}
 .nav a.lnk{font-size:.92rem;color:var(--muted);font-weight:500;transition:color .2s ease;position:relative}
@@ -106,8 +106,8 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.07;letter-s
 /* ---------- Hero ---------- */
 .hero{position:relative;padding:clamp(56px,8vw,104px) 0 clamp(64px,9vw,112px);overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;z-index:-2;
-  background:radial-gradient(120% 80% at 78% 0%,rgba(43,139,255,.16),transparent 55%),
-             radial-gradient(80% 60% at 0% 100%,rgba(19,102,230,.10),transparent 60%),var(--bg)}
+  background:radial-gradient(120% 80% at 78% 0%,rgba(232,179,74,.16),transparent 55%),
+             radial-gradient(80% 60% at 0% 100%,rgba(200,144,42,.10),transparent 60%),var(--bg)}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.4;
   background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
   background-size:54px 54px;mask-image:radial-gradient(75% 60% at 60% 20%,#000,transparent 80%)}
@@ -131,7 +131,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.07;letter-s
   box-shadow:0 40px 80px -30px rgba(0,0,0,.8);aspect-ratio:4/5}
 .media-frame img{width:100%;height:100%;object-fit:cover}
 .ph{background:
-   radial-gradient(120% 90% at 30% 10%,rgba(43,139,255,.18),transparent 55%),
+   radial-gradient(120% 90% at 30% 10%,rgba(232,179,74,.18),transparent 55%),
    linear-gradient(160deg,var(--surface-2),var(--surface));
    display:grid;place-items:center;color:var(--muted-2);font-size:.8rem;text-align:center;gap:8px;
    font-family:var(--display);letter-spacing:.04em}
@@ -140,7 +140,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.07;letter-s
   border-radius:16px;padding:16px 18px;display:flex;align-items:center;gap:13px;
   box-shadow:0 24px 50px -20px rgba(0,0,0,.7)}
 .hero-badge .ic{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;flex-shrink:0;
-  background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#001b3d}
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#1a1206}
 .hero-badge .ic svg{width:22px;height:22px}
 .hero-badge b{display:block;font-family:var(--display);font-size:1.05rem}
 .hero-badge span{font-size:.78rem;color:var(--muted)}
@@ -182,13 +182,13 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.07;letter-s
 
 /* ---------- Why us ---------- */
 .why{background:
-  radial-gradient(90% 70% at 100% 0%,rgba(43,139,255,.07),transparent 60%),var(--bg)}
+  radial-gradient(90% 70% at 100% 0%,rgba(232,179,74,.07),transparent 60%),var(--bg)}
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px}
 .why-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:30px 26px;
   transition:transform .3s ease,border-color .3s ease}
 .why-card:hover{transform:translateY(-5px);border-color:var(--accent)}
 .why-ic{width:50px;height:50px;border-radius:13px;display:grid;place-items:center;margin-bottom:20px;
-  background:linear-gradient(135deg,rgba(43,139,255,.18),rgba(19,102,230,.06));border:1px solid var(--line-2);color:var(--accent)}
+  background:linear-gradient(135deg,rgba(232,179,74,.18),rgba(200,144,42,.06));border:1px solid var(--line-2);color:var(--accent)}
 .why-ic svg{width:25px;height:25px}
 .why-card h3{font-size:1.18rem;margin-bottom:9px}
 .why-card p{color:var(--muted);font-size:.94rem}
@@ -204,7 +204,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.07;letter-s
 .ba-divider::after{content:"";position:absolute;top:50%;left:50%;width:38px;height:38px;transform:translate(-50%,-50%);
   border-radius:50%;background:var(--accent);border:3px solid var(--bg);box-shadow:0 0 18px var(--glow)}
 .ba-divider::before{content:"⟺";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  color:#001b3d;font-size:.8rem;z-index:4;font-weight:700}
+  color:#1a1206;font-size:.8rem;z-index:4;font-weight:700}
 .ba-tag{position:absolute;bottom:14px;z-index:4;font-family:var(--display);font-size:.7rem;font-weight:600;
   letter-spacing:.12em;text-transform:uppercase;padding:5px 11px;border-radius:7px;
   background:rgba(11,13,16,.7);border:1px solid var(--line-2);backdrop-filter:blur(6px)}
@@ -228,7 +228,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.07;letter-s
 .cta-band{position:relative;border-radius:24px;overflow:hidden;border:1px solid var(--line-2);
   background:linear-gradient(135deg,var(--surface-2),var(--surface));padding:clamp(40px,6vw,72px);text-align:center}
 .cta-band::before{content:"";position:absolute;inset:0;z-index:0;opacity:.5;
-  background:radial-gradient(70% 120% at 50% -20%,rgba(43,139,255,.22),transparent 60%)}
+  background:radial-gradient(70% 120% at 50% -20%,rgba(232,179,74,.22),transparent 60%)}
 .cta-band > *{position:relative;z-index:1}
 .cta-band .price{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3.4vw,2.4rem);margin:6px 0 4px}
 .cta-band .price .accent{color:var(--accent)}
@@ -244,18 +244,18 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.07;letter-s
   background:var(--surface-2);transition:border-color .2s ease,transform .2s ease}
 .crow:hover{border-color:var(--accent);transform:translateX(4px)}
 .crow .ic{width:44px;height:44px;border-radius:11px;display:grid;place-items:center;flex-shrink:0;
-  background:linear-gradient(135deg,rgba(43,139,255,.18),rgba(19,102,230,.06));color:var(--accent);border:1px solid var(--line-2)}
+  background:linear-gradient(135deg,rgba(232,179,74,.18),rgba(200,144,42,.06));color:var(--accent);border:1px solid var(--line-2)}
 .crow .ic svg{width:21px;height:21px}
 .crow span{display:block;font-size:.78rem;color:var(--muted);letter-spacing:.04em}
 .crow b{font-family:var(--display);font-size:1.02rem;word-break:break-word}
 .appoint{margin-top:22px;display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:12px;
-  background:rgba(43,139,255,.07);border:1px solid rgba(43,139,255,.25)}
+  background:rgba(232,179,74,.07);border:1px solid rgba(232,179,74,.25)}
 .appoint svg{width:22px;height:22px;color:var(--accent);flex-shrink:0;margin-top:2px}
 .appoint p{font-size:.92rem;color:var(--text)}
 .socials{display:flex;gap:12px;margin-top:24px}
 .socials a{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line-2);
   color:var(--text);transition:.22s}
-.socials a:hover{background:var(--accent);color:#001b3d;transform:translateY(-3px);border-color:var(--accent)}
+.socials a:hover{background:var(--accent);color:#1a1206;transform:translateY(-3px);border-color:var(--accent)}
 .socials svg{width:22px;height:22px}
 .map-card{padding:0;overflow:hidden;display:flex;flex-direction:column}
 .map-card .ph{flex:1;min-height:260px}
@@ -307,7 +307,7 @@ footer{border-top:1px solid var(--line);padding:48px 0 36px;background:var(--sur
   .hero::before{
     background:
       linear-gradient(180deg,rgba(11,13,16,.72) 0%,rgba(11,13,16,.86) 55%,rgba(11,13,16,.96) 100%),
-      radial-gradient(120% 70% at 80% 0%,rgba(31,128,255,.18),transparent 55%),
+      radial-gradient(120% 70% at 80% 0%,rgba(232,179,74,.18),transparent 55%),
       url('img/hero-detailing.jpg') center 18% / cover no-repeat,
       var(--bg);
   }
